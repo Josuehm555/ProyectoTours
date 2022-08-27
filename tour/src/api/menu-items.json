@@ -1,0 +1,33 @@
+{
+    "data": [{
+            "title": "Categorías",
+            "icon": "fa fa-home fa-2x",
+            "url": "/"
+        },
+        {
+            "title": "Subcategorías",
+            "icon": "fa fa-file fa-2x",
+            "url": "/subcategoria"
+        },
+        {
+            "title": "Promosiones",
+            "icon": "fa fa-tags fa-2x",
+            "url": "/promociones"
+        },
+        {
+            "title": "Galería de Eventos",
+            "icon": "fa fa-camera fa-2x",
+            "url": "galeria"
+        },
+        {
+            "title": "Administradores",
+            "icon": "fa fa-user fa-2x",
+            "url": "/administradores"
+        },
+        {
+            "title": "Información General",
+            "icon": "fa fa-phone fa-2x",
+            "url": "/informacion"
+        }
+    ]
+}
