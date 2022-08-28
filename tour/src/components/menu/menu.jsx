@@ -21,7 +21,7 @@ export default function Menu({Items}) {
 
                 <ul className="logout">
                     <li>
-                        <i className="fa fa-power-off fa-2x"></i>
+                        <i className="fa fa-sign-out"></i>
                         <span className="nav-text">
                             Cerrar Sesión
                         </span>
