@@ -1,7 +1,6 @@
 import './styles.css'
 
-export default function Form({ original, setList, setLength }) {
-    
+export default function Form({ original, setList, setLength, title }) {
     const filter = () => {
         let wordFilter = document.getElementById("input").value
         let newList = []
@@ -30,7 +29,7 @@ export default function Form({ original, setList, setLength }) {
 
     return (
         <form>
-            <input onChange={filter} type="text" id="input" name="input" placeholder='Buscar'/>
+            <input onChange={filter} type="text" id="input" name="input" placeholder={"Buscar "+title}/>
         </form>
     );
 }
