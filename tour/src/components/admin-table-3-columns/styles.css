@@ -45,3 +45,7 @@ td button{
     margin-left: 10px;
     border: 0;
 }
+
+td button:hover{
+    background-color: var(--background-color-hover);
+}
