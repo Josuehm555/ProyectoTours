@@ -10,11 +10,10 @@
 
 table {
     margin-top: 50px;
-    margin-left: 100px;
     border-collapse: collapse;
-    width: 80%;
-    box-shadow: 1px 1px 10px black;
+    width: 100%;
     font-size: large;
+    box-shadow: var(--box-shadow);
 }
 
 thead{
@@ -44,6 +43,7 @@ td button{
     margin-right: 10px;
     margin-left: 10px;
     border: 0;
+    box-shadow: none;
 }
 
 td button:hover{
