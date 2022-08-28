@@ -2,9 +2,10 @@ import "./styles.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
-export default function Table({ columns, rows }) {
+export default function Table({ columns, rows, length }) {
     return (
         <div className="tableContainer">
+            {length != 0 ? (
             <table>
                 <thead>
                     <tr>
@@ -15,7 +16,7 @@ export default function Table({ columns, rows }) {
                     </tr>
                 </thead>
                 <tbody>
-                    {rows.data.map(element =>
+                    {rows.map(element =>
                         <tr key={element.column_1}>
                             <td>{element.column_1}</td>
                             <td>{element.column_2}</td>
@@ -30,6 +31,11 @@ export default function Table({ columns, rows }) {
                     )}
                 </tbody>
             </table>
+            ) : (
+                <table>
+                <h2>No hay resultados</h2>
+                </table>
+            )}
         </div>
     );
 }
