@@ -36,16 +36,7 @@ tbody tr:hover{
     background-color: var(--background-color-hover);
 }
 
-td button{
-    cursor: pointer;
-    background-color: transparent;
-    padding: 0;
+.iconsLink{
     margin-right: 10px;
     margin-left: 10px;
-    border: 0;
-    box-shadow: none;
-}
-
-td button:hover{
-    background-color: var(--background-color-hover);
 }
