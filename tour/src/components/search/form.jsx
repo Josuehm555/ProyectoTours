@@ -1,13 +1,13 @@
 import './styles.css'
 
-export default function Form({ original, setList, setLength, title }) {
+export default function Form({ original, setList, setLength, title, itemsPerTable }) {
     const filter = () => {
         let wordFilter = document.getElementById("input").value
         let newList = []
         
         if(wordFilter === ''){
             setLength(original.length);
-            setList(original);
+            setList([...original].slice(0, itemsPerTable));
         }
         else{
             for (let index = 0; index < original.length; index++) {
@@ -23,7 +23,7 @@ export default function Form({ original, setList, setLength, title }) {
                 }
             }
             setLength(newList.length);
-            setList(newList);
+            setList([...newList].slice(0, itemsPerTable));
         }
     }
 
