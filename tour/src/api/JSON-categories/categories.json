@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "column_1": "row 1",
+            "column_2": "image 1",
+            "column_3": "description 1",
+            "urlSee": "",
+            "urlUpdate": "",
+            "urlDelete": ""
+        },
+        {
+            "column_1": "row 2",
+            "column_2": "image 2",
+            "column_3": "description 2",
+            "urlSee": "",
+            "urlUpdate": "",
+            "urlDelete": ""
+        },
+        {
+            "column_1": "row 3",
+            "column_2": "image 3",
+            "column_3": "description 3",
+            "urlSee": "",
+            "urlUpdate": "",
+            "urlDelete": ""
+        }
+    ]
+}

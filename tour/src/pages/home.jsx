@@ -1,5 +1,5 @@
-import Columns from "../api/category-table-columns.json"
-import Rows from "../api/categories.json"
+import Columns from "../api/JSON-categories/category-table-columns.json"
+import Rows from "../api/JSON-categories/categories.json"
 import TablePage from "../components/table-page/page";
 
 export default function Home() {

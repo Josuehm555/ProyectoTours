@@ -1,0 +1,28 @@
+{
+    "data": [
+        {
+            "column_1": "1",
+            "column_2": "Ramiro",
+            "column_3": "Desolado@gmail.com",
+            "urlSee": "",
+            "urlUpdate": "",
+            "urlDelete": ""
+        },
+        {
+            "column_1": "2",
+            "column_2": "Panchita",
+            "column_3": "Corrales@gmail.com",
+            "urlSee": "",
+            "urlUpdate": "",
+            "urlDelete": ""
+        },
+        {
+            "column_1": "3",
+            "column_2": "Nelson",
+            "column_3": "Mandela@gmail.com",
+            "urlSee": "",
+            "urlUpdate": "",
+            "urlDelete": ""
+        }
+    ]
+}
