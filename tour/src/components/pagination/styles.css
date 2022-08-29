@@ -1,0 +1,33 @@
+:root{
+    --background-color: #212121;
+}
+
+.pagination {
+    display: flex;
+    list-style: none;
+    font-size: large;
+    margin-top: 40px;
+}
+
+.pagination>li>a {
+    border-radius: 100%;
+    padding: 5px 14px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.pagination>li>a:hover{
+    background-color: white;
+    box-shadow: var(--box-shadow);
+}
+
+.pagination>.active>a{
+    background-color: var(--background-color);
+    color: white;
+}
+
+.pagination>.active>a:hover{
+    background-color: var(--background-color);
+    color: white;
+    box-shadow: none;
+}
