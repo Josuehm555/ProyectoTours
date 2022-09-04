@@ -1,9 +1,9 @@
-import { faTrashAlt, faEye } from '@fortawesome/free-solid-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from 'react';
 import Modal from '../modals/modal'
-import Delete from '../modals/galery/delete/delete';
+import Delete from '../modals/galery/delete';
 import iconAddGalery from '../../assets/addGalery.png'
+import { faTrashAlt, faEye } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './styles.css'
 
 export default function Card({ images, setImages }) {
