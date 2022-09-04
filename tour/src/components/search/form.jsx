@@ -1,12 +1,18 @@
 import './styles.css'
+import Button from '../button/button';
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-export default function Form({ original, setList, setLength, title, itemsPerTable }) {
-    const filter = () => {
+const icon = <FontAwesomeIcon icon={faSearch}/>
+
+export default function Form({ original, setList, title, itemsPerTable }) {
+    
+    const filter = (e) => {
+        e.preventDefault();
         let wordFilter = document.getElementById("input").value
         let newList = []
         
         if(wordFilter === ''){
-            setLength(original.length);
             setList([...original].slice(0, itemsPerTable));
         }
         else{
@@ -22,14 +28,14 @@ export default function Form({ original, setList, setLength, title, itemsPerTabl
                     newList.push(original[index]);
                 }
             }
-            setLength(newList.length);
             setList([...newList].slice(0, itemsPerTable));
         }
     }
 
     return (
-        <form>
-            <input onChange={filter} type="text" id="input" name="input" placeholder={"Buscar "+title}/>
+        <form className="form" onSubmit={filter}>
+            <input className='input' type="text" id="input" name="input" placeholder={"Buscar "+ title}/>
+            <Button titulo={"Buscar"} icon={icon}/>
         </form>
     );
 }

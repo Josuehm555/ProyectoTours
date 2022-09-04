@@ -1,14 +1,6 @@
 @import url(//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css);
 @import url(https://fonts.googleapis.com/css?family=Titillium+Web:300);
 
-:root {
-  --menu-close-color: #212121;
-  --menu-open-color: #212121;
-  --menu-icon-color: white;
-  --menu-hover-color: #b22d2d;
-  --menu-letter-color: white;
-}
-
 .fa-2x {
   font-size: 2em;
 }
@@ -26,15 +18,14 @@
 
 .main-menu:hover,
 nav.main-menu.expanded {
-  box-shadow: 6px 5px 5px  #aaaaaa;
-  width: 253px;
+  box-shadow: var(--box-shadow-hover);
+  width: 270px;
   overflow: visible;
-  background-color: var(--menu-open-color);
 }
 
 .main-menu {
-  background: var(--menu-close-color);
-  position: absolute;
+  background: var(--color2);
+  position: fixed;
   top: 0;
   bottom: 0;
   height: 100%;
@@ -48,7 +39,7 @@ nav.main-menu.expanded {
 }
 
 .main-menu > ul {
-  margin: 7px 0;
+  margin: 9px 0;
 }
 
 .main-menu li {
@@ -59,13 +50,14 @@ nav.main-menu.expanded {
 }
 
 .nav-text:hover {
-  background-color: var(--menu-hover-color);
+  background-color: var(--color1);
+  text-align: left;
   border-radius: 3px;
   font-size: 1.1em;
 }
 
 .link {
-  color: var(--menu-letter-color);
+  color: white;
   text-decoration: none;
   display: block;
   padding:8px 0 8px 0  ;
@@ -76,13 +68,15 @@ nav.main-menu.expanded {
   display: table-cell;
   vertical-align: middle;
   width: 190px;
+  text-align: left;
+  padding-left: 10px;
 }
 
 .main-menu > ul.logout {
   position: absolute;
   left: 0;
   bottom: 0;
-  color: var(--menu-letter-color);
+  color: white;
 }
 
 .no-touch .scrollable.hover {

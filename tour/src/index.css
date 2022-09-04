@@ -1,13 +1,22 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap');
 
 body {
   margin: 0;
-  font-family: 'Titillium Web', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin-top: 100px;
 }
 
 :root{
-  --box-shadow: 1px 1px 10px black;
+  --box-shadow: 1px 1px 5px black;
+  --box-shadow-hover: 1px 1px 10px black;
+  --color1: #aede67;
+  --color2: #3b97b7;
+  --color3: #666666;
+  --color4: rgb(245, 245, 245);
+}
+
+h1{
+  color: var(--color3);
 }
