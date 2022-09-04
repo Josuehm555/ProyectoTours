@@ -1,4 +1,4 @@
-import Button from '../../../button/button';
+import Button from '../../button/button';
 import './styles.css'
 
 export default function Delete({ element, setOpenModal, OnClick }) {

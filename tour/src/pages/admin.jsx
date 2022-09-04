@@ -5,7 +5,7 @@ import { faEye, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 
 const Buttons = [ 
     {title:"Abrir", style:{ color: "#aede67", marginLeft: "0" }, icon:faEye, titleModal: "Información Completa"},
-    {title:"Modificar", style:{ color: "#3b97b7"}, icon:faEdit, titleModal: "Modificar Inforación"},
+    {title:"Modificar", style:{ color: "#3b97b7"}, icon:faEdit, titleModal: "Modificar Información"},
     {title:"Eliminar", style:{ color: "red", marginRight: "0" }, icon:faTrash, titleModal: "Confirmación"}
 ]
 
