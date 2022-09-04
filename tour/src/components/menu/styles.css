@@ -21,6 +21,7 @@ nav.main-menu.expanded {
   box-shadow: var(--box-shadow-hover);
   width: 270px;
   overflow: visible;
+  background-color: var(--color2);
 }
 
 .main-menu {

@@ -6,22 +6,25 @@ import PaginatedItems from "../pagination/pagination";
 import './styles.css'
 import { faPlus } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
+import Modal from "../modals/modal";
+import Add from '../modals/categories/Add/add'
 const icon = <FontAwesomeIcon icon={faPlus}/>
 
 export default function TablePage({ Columns, Rows, Title, Buttons }) {
     const itemsPerTable = 3;
     const originalList = Rows.data;
     const [list, setList] = useState([...originalList].slice(0, itemsPerTable));
+    const [openModal, setOpenModal] = useState(false);
 
     return (
         <>
             <h1>{Title}</h1>
             <div className="tableContainer">
                 <div className="formContainer">
-                    <Button titulo={"Agregar "+Title} icon={icon} style={{backgroundColor: "#3b97b7"}} />
+                    <Button OnClick={()=>setOpenModal(!openModal)}  titulo={"Agregar "+Title} icon={icon} style={{backgroundColor: "#3b97b7"}} />
                     <Form original={originalList} setList={setList} title={Title} itemsPerTable={itemsPerTable} />
                 </div>
+                { openModal&& <Modal open={openModal} setOpen={setOpenModal} Container={Add} element={"element"} title={"Añadir administrador"} ></Modal>}
 
                 <Table columns={Columns} rows={list} Buttons={Buttons} />
 
