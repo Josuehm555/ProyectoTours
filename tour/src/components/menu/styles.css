@@ -21,11 +21,10 @@ nav.main-menu.expanded {
   box-shadow: var(--box-shadow-hover);
   width: 270px;
   overflow: visible;
-  background-color: var(--color3);
 }
 
 .main-menu {
-  background: var(--color3);
+  background: var(--color2);
   position: fixed;
   top: 0;
   bottom: 0;
