@@ -1,26 +1,34 @@
 import React, { useState } from "react";
-import Button from "../add-button/button";
+import Button from "../button/button";
 import Form from "../search/form";
 import Table from "../admin-table-3-columns/table";
 import PaginatedItems from "../pagination/pagination";
 import './styles.css'
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-export default function TablePage({ Columns, Rows, Title }) {
-    const itemsPerTable = 2;
+const icon = <FontAwesomeIcon icon={faPlus}/>
+
+export default function TablePage({ Columns, Rows, Title, Buttons }) {
+    const itemsPerTable = 3;
     const originalList = Rows.data;
     const [list, setList] = useState([...originalList].slice(0, itemsPerTable));
-    const [length, setLength] = useState(originalList.length)
 
     return (
         <>
             <h1>{Title}</h1>
             <div className="tableContainer">
                 <div className="formContainer">
-                    <Button titulo={Title} />
-                    <Form original={originalList} setList={setList} setLength={setLength} title={Title} itemsPerTable={itemsPerTable} />
+                    <Button titulo={"Agregar "+Title} icon={icon} style={{backgroundColor: "#3b97b7"}} />
+                    <Form original={originalList} setList={setList} title={Title} itemsPerTable={itemsPerTable} />
                 </div>
-                <Table columns={Columns} rows={list} length={length} />
-                <PaginatedItems itemsPerPage={itemsPerTable} items={originalList} setCurrentItems={setList} />
+
+                <Table columns={Columns} rows={list} Buttons={Buttons} />
+
+                {list.length !== 0 ? (
+                    <PaginatedItems itemsPerPage={itemsPerTable} items={originalList} setCurrentItems={setList}
+                    />
+                ) : null}
             </div>
         </>
     );

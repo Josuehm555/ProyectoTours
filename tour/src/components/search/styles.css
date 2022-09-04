@@ -1,6 +1,6 @@
-input{
+.input{
     padding: 15px;
-    border: 1px solid rgb(199, 199, 199);
+    border: none;
     border-radius: 5px;
     background-image: url('../../assets/search.png');
     background-position: 15px 15px;
@@ -9,4 +9,10 @@ input{
     padding-left: 50px;
     width: 80%;
     box-shadow: var(--box-shadow);
+    margin: 0 1em 0 30%;
+    outline: none;
+}
+
+form{
+    display: flex;
 }
