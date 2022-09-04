@@ -16,7 +16,7 @@ export default function Card({ images, setImages }) {
         setImage(image)
         setOpenModal(!openModal)
     }
-    
+
     function saveDelete() {
         const newImgs = []
         images.map((element, index) => {
@@ -30,26 +30,26 @@ export default function Card({ images, setImages }) {
 
     function changeInput(e) {
         let indexImg;
-    
+
         if (images.length > 0) {
             indexImg = images[images.length - 1].index + 1;
         } else {
             indexImg = 0;
         }
-    
+
         let newImgsToState = readmultifiles(e, indexImg);
         let newImgsState = [...newImgsToState, ...images];
         setImages(newImgsState);
     };
-    
+
     function readmultifiles(e, indexInicial) {
         const files = e.currentTarget.files;
         const arrayImages = [];
-    
+
         Object.keys(files).forEach((i) => {
             const file = files[i];
             let url = URL.createObjectURL(file);
-    
+
             arrayImages.push(url);
             indexInicial++;
         });
@@ -58,14 +58,12 @@ export default function Card({ images, setImages }) {
 
     return (
         <div className='cardContainer'>
-            <div className="cardUpload" title='Agregar Imagen'>
+            <label className="cardUpload" title='Agregar Imagen'>
                 <div className='buttonsCardUpload'>
-                    <label>
-                        <img src={iconAddGalery} className='iconCardUpload' />
-                        <input hidden type="file" accept='image/*' multiple onChange={changeInput}></input>
-                    </label>
+                    <img src={iconAddGalery} className='iconCardUpload' />
+                    <input hidden type="file" accept='image/*' multiple onChange={changeInput}></input>
                 </div>
-            </div>
+            </label>
             {images.map((image, index) =>
                 <div className="card" key={index}>
                     <img className="imageCard" src={image} />
