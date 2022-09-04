@@ -1,9 +1,5 @@
 :root{
-    --background-color: rgb(45, 45, 45);
-    --background-color-hover: rgb(223, 223, 223);
-    --font-color: white;
     --padding-top-botton: 15px;
-    --border-color: rgb(223, 223, 223);
 }
 
 table {
@@ -15,8 +11,8 @@ table {
 }
 
 thead{
-    background-color: var(--background-color);
-    color: var(--font-color);
+    background-color: var(--color3);
+    color: white;
 }
 
 thead th{
@@ -25,16 +21,24 @@ thead th{
 
 th,
 td {
-    border-bottom: 1.5px solid var(--border-color);
+    border-bottom: 1.5px solid var(--color4);
     padding-top: var(--padding-top-botton);
     padding-bottom: var(--padding-top-botton);
 }
 
 tbody tr:hover{
-    background-color: var(--background-color-hover);
+    background-color: var(--color4);
 }
 
 .iconsLink{
     margin-right: 10px;
     margin-left: 10px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.iconsLink:hover{
+    
+    transform: scale(1.5);
 }

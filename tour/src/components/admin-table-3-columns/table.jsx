@@ -1,12 +1,12 @@
 import "./styles.css"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEye, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom'
+import NotFound from './not-found'
+import Button from "./gestion-button";
 
-export default function Table({ columns, rows, length }) {
+export default function Table({ columns, rows, Buttons }) {
+
     return (
         <div>
-            {length != 0 ? (
+            {rows.length !== 0 ? (
                 <table>
                     <thead>
                         <tr>
@@ -22,26 +22,17 @@ export default function Table({ columns, rows, length }) {
                                 <td>{element.column_1}</td>
                                 <td>{element.column_2}</td>
                                 <td>{element.column_3}</td>
-
                                 <td>
-                                    <Link className="iconsLink" to={element.urlSee} title="Abrir" style={{ color: "green", marginLeft: "0" }}><FontAwesomeIcon icon={faEye} /></Link>
-                                    <Link className="iconsLink" to={element.urlUpdate} title="Editar" style={{ color: "rgb(0, 136, 255)" }}><FontAwesomeIcon icon={faEdit} /></Link>
-                                    <Link className="iconsLink" to={element.urlDelete} title="Eliminar" style={{ color: "red", marginRight: "0" }}><FontAwesomeIcon icon={faTrash} /></Link>
+                                    {Buttons.map((button, key) =>
+                                        <Button key={key} button={button} element={element} />
+                                    )}
                                 </td>
                             </tr>
                         )}
                     </tbody>
                 </table>
             ) : (
-                <table>
-                    <tbody>
-                        <tr>
-                            <td>
-                                <h2>No hay resultados</h2>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
+                <NotFound> </NotFound>
             )}
         </div>
     );
