@@ -41,13 +41,6 @@
   position: relative;
 }
 
-.modal__title {
-  font-size: 2.5em;
-  font-weight: 500;
-  margin-top: 1px;
-  display: inline;
-}
-
 .modal__close {
   display: inline-block;
   border: 1px solid;

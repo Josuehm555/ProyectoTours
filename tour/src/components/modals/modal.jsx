@@ -8,7 +8,7 @@ export default function Modal({ open, setOpen, Container, element, title, OnClic
     return (
         <div className={(open) ? "modal" : "modal__alt"} >
             <div className="modal__container">
-                <h2 className="modal__title">{title}</h2>
+                <h1>{title}</h1>
                 <button onClick={() => setOpen(!open)} title="Cerrar" className="modal__close__x">
                     <FontAwesomeIcon icon={faXmark} />
                 </button>

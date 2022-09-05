@@ -1,11 +1,12 @@
 import "./styles.css"
+import image from "../../../../assets/galery1.jpg"
 
-export default function See({ element, setOpenModal }) {
+export default function See({ element }) {
 
     return (
-        <>
-            <h1>Ver</h1>
-            
-        </>
+        <div className="seeContainer">
+            <p>{element.column_2}</p>
+            <img src={ image } />
+        </div>
     );
 }
