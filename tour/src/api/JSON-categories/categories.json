@@ -1,60 +1,39 @@
 {
     "data": [
         {
-            "column_1": "row 1",
-            "column_2": "image 1",
-            "column_3": "description 1",
-            "urlSee": "",
-            "urlUpdate": "",
-            "urlDelete": ""
+            "column_1": "Diagnósticos",
+            "column_2": "Aquí va la descricción muy muy muy muy largaaaa para provar los espacios",
+            "image": ""
         },
         {
-            "column_1": "row 2",
-            "column_2": "image 2",
-            "column_3": "description 2",
-            "urlSee": "",
-            "urlUpdate": "",
-            "urlDelete": ""
+            "column_1": "Mejoramiento Continuo",
+            "column_2": "Aquí va la descricción",
+            "image": ""
         },
         {
-            "column_1": "row 3",
-            "column_2": "image 3",
-            "column_3": "description 3",
-            "urlSee": "",
-            "urlUpdate": "",
-            "urlDelete": ""
+            "column_1": "Patrimonio turístico",
+            "column_2": "Aquí va la descricción",
+            "image": ""
         },
         {
-            "column_1": "row 4",
-            "column_2": "image 4",
-            "column_3": "description 5",
-            "urlSee": "",
-            "urlUpdate": "",
-            "urlDelete": ""
+            "column_1": "Diseño",
+            "column_2": "Aquí va la descricción",
+            "image": ""
         },
         {
-            "column_1": "row 5",
-            "column_2": "image 5",
-            "column_3": "description 5",
-            "urlSee": "",
-            "urlUpdate": "",
-            "urlDelete": ""
+            "column_1": "Gestión en Sostenibilidad Turística",
+            "column_2": "Aquí va la descricción",
+            "image": ""
         },
         {
-            "column_1": "row 6",
-            "column_2": "image 6",
-            "column_3": "description 6",
-            "urlSee": "",
-            "urlUpdate": "",
-            "urlDelete": ""
+            "column_1": "Marketing",
+            "column_2": "Aquí va la descricción",
+            "image": ""
         },
         {
-            "column_1": "row 3",
-            "column_2": "image 32",
-            "column_3": "description 31",
-            "urlSee": "",
-            "urlUpdate": "",
-            "urlDelete": ""
+            "column_1": "Capacitación",
+            "column_2": "Aquí va la descricción",
+            "image": ""
         }
     ]
 }

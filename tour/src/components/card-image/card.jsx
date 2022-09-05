@@ -1,10 +1,12 @@
+import './styles.css';
 import { useState } from 'react';
-import Modal from '../modals/modal'
+import Modal from '../modals/modal';
 import Delete from '../modals/galery/delete';
-import iconAddGalery from '../../assets/addGalery.png'
-import { faTrashAlt, faEye } from '@fortawesome/free-solid-svg-icons';
+import { addImage } from '../../hooks/addImages';
+import { deleteImage } from '../../hooks/deleteImage';
+import iconAddGalery from '../../assets/addGalery.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './styles.css'
+import { faTrashAlt, faEye } from '@fortawesome/free-solid-svg-icons';
 
 export default function Card({ images, setImages }) {
     const [openModal, setOpenModal] = useState(false);
@@ -18,50 +20,22 @@ export default function Card({ images, setImages }) {
     }
 
     function saveDelete() {
-        const newImgs = []
-        images.map((element, index) => {
-            if (index !== indexImage) {
-                newImgs.push(element)
-            }
-        });
+        const newImgs = deleteImage(images, indexImage)
         setImages(newImgs);
         setOpenModal(false)
     }
 
-    function changeInput(e) {
-        let indexImg;
-
-        if (images.length > 0) {
-            indexImg = images[images.length - 1].index + 1;
-        } else {
-            indexImg = 0;
-        }
-
-        let newImgsToState = readmultifiles(e, indexImg);
-        let newImgsState = [...newImgsToState, ...images];
-        setImages(newImgsState);
+    function ChangeInput(e) {
+        const newImages = addImage(e, images)
+        setImages(newImages);
     };
-
-    function readmultifiles(e, indexInicial) {
-        const files = e.currentTarget.files;
-        const arrayImages = [];
-
-        Object.keys(files).forEach((i) => {
-            const file = files[i];
-            let url = URL.createObjectURL(file);
-
-            arrayImages.push(url);
-            indexInicial++;
-        });
-        return arrayImages;
-    }
 
     return (
         <div className='cardContainer'>
             <label className="cardUpload" title='Agregar Imagen'>
                 <div className='buttonsCardUpload'>
                     <img src={iconAddGalery} className='iconCardUpload' />
-                    <input hidden type="file" accept='image/*' multiple onChange={changeInput}></input>
+                    <input hidden type="file" accept='image/*' multiple onChange={ChangeInput}></input>
                 </div>
             </label>
             {images.map((image, index) =>

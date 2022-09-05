@@ -1,17 +1,11 @@
-
-import Input from '../../../../components/input/input'
+import Input from '../../../input/input'
 import { useForm } from '../../../../hooks/useForm';
 import Button from '../../../button/button';
 
+export default function Add({ setOpenModal }) {
 
-export default function Add({ element, setOpenModal }) {
-
-    const { onInputChange, nombre, apellido, correo } = useForm(
-        {
-            nombre: '',
-            apellido: '',
-            correo: ''
-        }
+    const { onInputChange, nombre, apellido, correo } = useForm( 
+        { nombre: '', apellido: '', correo: '' }
     )
 
     return (

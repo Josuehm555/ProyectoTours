@@ -1,7 +1,6 @@
 .input-group {
   position: relative;
   margin-top: 2em;
-  ;
   margin-right: 1%;
   margin-bottom: 2em;
   margin-left: 1%;
@@ -20,8 +19,7 @@
 }
 
 .inputSee:hover {
-
-  box-shadow: 5px 5px 8px 1px #888888
+  box-shadow: 5px 5px 8px 1px #888888;
 }
 
 .input-label {
@@ -29,14 +27,22 @@
   top: 0;
   left: 0;
   transform: translate(19px, 10px);
-  transition: transform .25s;
+  transition: transform 0.25s;
   pointer-events: none;
 }
 
-.inputSee:focus+.input-label,
-.inputSee:valid+.input-label {
-  transform:
-    translate(10px, -14px) scale(.8);
+.inputSee:focus + .input-label,
+.inputSee:valid + .input-label {
+  transform: translate(10px, -14px) scale(0.8);
+  color: var(--color2);
+  padding-inline: 5px;
+  background-color: #fff;
+}
+.input-label-disabled {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translate(10px, -14px) scale(0.8);
   color: var(--color2);
   padding-inline: 5px;
   background-color: #fff;
@@ -44,19 +50,4 @@
 
 .inputSee:is(:focus, :valid) {
   outline-color: var(--color3);
-}
-
-.seeContainer{
-  display: flex;
-}
-
-.seeContainer p{
-  padding-right: 20px;
-  text-align: justify;
-  width: 300px;
-}
-
-.seeContainer img {
-  max-width: 300px;
-  max-height: 300px;
 }

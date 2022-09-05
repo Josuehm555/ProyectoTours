@@ -2,7 +2,7 @@ import "./styles.css"
 import NotFound from './not-found'
 import Button from "./gestion-button";
 
-export default function Table({ columns, rows, Buttons }) {
+export default function Table({ columns, rows, Buttons, See, Update, Delete }) {
 
     return (
         <div>
@@ -17,14 +17,21 @@ export default function Table({ columns, rows, Buttons }) {
                         </tr>
                     </thead>
                     <tbody>
-                        {rows.map((element, key) =>
-                            <tr key={key}>
+                        {rows.map((element, index) =>
+                            <tr key={index}>
+                                <td>{index+1}</td>
                                 <td>{element.column_1}</td>
                                 <td>{element.column_2}</td>
-                                <td>{element.column_3}</td>
-                                <td>
+                                <td className="icons">
                                     {Buttons.map((button, key) =>
-                                        <Button key={key} button={button} element={element} />
+                                        <Button
+                                            key={key}
+                                            button={button}
+                                            element={element}
+                                            SeeModal={See}
+                                            UpdateModal={Update}
+                                            DeleteModal={Delete}
+                                        />
                                     )}
                                 </td>
                             </tr>

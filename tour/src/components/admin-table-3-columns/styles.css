@@ -24,6 +24,8 @@ td {
     border-bottom: 1.5px solid var(--color4);
     padding-top: var(--padding-top-botton);
     padding-bottom: var(--padding-top-botton);
+    padding-left: 20px;
+    max-width: 300px;
 }
 
 tbody tr:hover{
@@ -41,4 +43,9 @@ tbody tr:hover{
 .iconsLink:hover{
     
     transform: scale(1.5);
+}
+
+tr .icons{
+    min-width: 200px;
+    max-width: 200px;
 }
