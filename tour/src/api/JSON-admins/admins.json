@@ -1,25 +1,22 @@
 {
     "data": [
         {
-            "column_1": "1",
-            "column_2": "Ramiro",
-            "column_3": "Desolado@gmail.com",
+            "column_1": "Ramiro Perez",
+            "column_2": "Desolado@gmail.com",
             "urlSee": "",
             "urlUpdate": "",
             "urlDelete": ""
         },
         {
-            "column_1": "2",
-            "column_2": "Panchita",
-            "column_3": "Corrales@gmail.com",
+            "column_1": "Panchita Rodriguez",
+            "column_2": "Corrales@gmail.com",
             "urlSee": "",
             "urlUpdate": "",
             "urlDelete": ""
         },
         {
-            "column_1": "3",
-            "column_2": "Nelson",
-            "column_3": "Mandela@gmail.com",
+            "column_1": "Nelson Rojas",
+            "column_2": "Mandela@gmail.com",
             "urlSee": "",
             "urlUpdate": "",
             "urlDelete": ""
