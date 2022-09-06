@@ -3,6 +3,7 @@ import Home from '../pages/home'
 import Admin from '../pages/admin';
 import NotFoundPage from '../pages/not-found-page';
 import Galery from '../pages/galery';
+import Subcategory from '../pages/subcategories';
 
 export default function Routing() {
     return (
@@ -11,6 +12,7 @@ export default function Routing() {
             <Route path='/' element={<Home/>} />
             <Route path='/administradores' element={<Admin/>} />
             <Route path='/galeria' element={<Galery/>} />
+            <Route path='/subcategoria' element={<Subcategory/>} />
         </Routes>
     );
 }
