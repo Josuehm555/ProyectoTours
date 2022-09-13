@@ -11,7 +11,6 @@ import Input from '../../../input/input';
 
 export default function Edit({ element, setOpenModal, Collection, setAlert }) {
 
-    const [images, setImages] = useState([])
     const [Categories, setCategories] = useState([]);
     const [Category, setCategory] = useState();
     const [ErrorMessage, setError] = useState(false);
@@ -30,7 +29,7 @@ export default function Edit({ element, setOpenModal, Collection, setAlert }) {
     const update = async () => {
         const snap = query(collection(db, 'categories'));
         onSnapshot(snap, () => {
-            let data = readData('categories');
+            let data = readData('categories', setError, setError);
             data.then(function (result) {
                 if (data != null) {
                     setCategories(result);
