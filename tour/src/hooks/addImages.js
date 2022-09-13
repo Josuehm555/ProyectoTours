@@ -22,7 +22,10 @@ const readmultifiles = (e, indexInicial) => {
         const file = files[i];
         let url = URL.createObjectURL(file);
 
-        arrayImages.push(url);
+        arrayImages.push({
+            index: indexInicial,
+            url, file
+        });
         indexInicial++;
     });
     return arrayImages;

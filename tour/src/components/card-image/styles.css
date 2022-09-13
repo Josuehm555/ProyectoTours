@@ -1,30 +1,34 @@
 .cardContainer {
   display: grid;
-  grid-template-columns: auto auto auto auto;
-  margin: 100px;
+  grid-template-columns: auto auto auto auto auto;
+  margin-right: 40px;
+  margin-left: 100px;
   margin-top: 0;
   text-align: center;
+  margin-bottom: 50px;
 }
 
-.cardUpload{
+.cardUpload {
   background-color: rgba(0, 0, 0, 0.877);
   border-radius: 10%;
   cursor: pointer;
 }
 
-.cardUpload:hover{
+.cardUpload:hover,
+.card:hover {
   transform: scale(1.2);
-  transition: 0.4s;
+  transition: 0.5s;
 }
 
-.card, .cardUpload {
+.card,
+.cardUpload {
   width: 250px;
   height: 250px;
   margin: 30px auto;
   position: relative;
 }
 
-.card:hover:after{
+.card:hover:after {
   content: "";
   position: absolute;
   top: 0;
@@ -32,7 +36,6 @@
   left: 0;
   right: 0;
   background-color: rgba(0, 0, 0, 0.7);
-  transform: scale(1.2);
   border-radius: 10%;
 }
 
@@ -46,17 +49,13 @@
   border-radius: 10%;
 }
 
-.card:hover .imageCard {
-  transform: scale(1.2);
-  transition: 0s;
-}
-
 .card:hover .buttonsCard {
   opacity: 1;
   z-index: 2;
 }
 
-.buttonsCard, .buttonsCardUpload {
+.buttonsCard,
+.buttonsCardUpload {
   opacity: 0;
   position: absolute;
   top: 50%;
@@ -66,26 +65,47 @@
   text-align: center;
 }
 
-.buttonsCardUpload{
+.buttonsCardUpload {
   opacity: 1;
 }
 
-.buttonsCard button, .cardUpload button{ 
+.buttonsCard button,
+.cardUpload button {
   background-color: transparent;
   border: none;
   margin-left: 10px;
   cursor: pointer;
 }
 
-.iconCard, .iconCardUpload{
-    color: white;
-    font-size: 40px;
+.iconCard,
+.iconCardUpload {
+  font-size: 40px;
 }
 
-.iconCard:hover{
+.iconCard:hover {
   transform: scale(1.5);
+  transition: 0.4s;
 }
 
-.iconCardUpload{
+.iconCardUpload {
   width: 70%;
+}
+
+.emptyCollection{
+  margin-top: 120px;
+  text-align: center;
+}
+
+.spinner{
+  margin-top: 80px;
+}
+
+.spinner img{
+  max-width: 150px;
+}
+
+@media only screen and (max-width: 450px) {
+  .emptyCollection{
+    font-size: small;
+  }
 }

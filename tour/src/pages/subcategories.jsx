@@ -1,5 +1,4 @@
 import Columns from "../api/JSON-subcategories/subcategory-table-columns.json"
-import Rows from "../api/JSON-subcategories/subcategories.json"
 import TablePage from "../components/table-page/page";
 import { faEye, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import Add from "../components/modals/subcategories/add/add";
@@ -18,10 +17,10 @@ export default function Sugcategory() {
     return (
         <TablePage
             Columns={Columns}
-            Rows={Rows}
+            Collection={"subcategories"}
             Title={"Subcategorías"}
             titleModal={"Información completa"}
-            messageButton={"Ok"} 
+            messageButton={"Ok"}
             Buttons={Buttons}
             Add={Add}
             See={See}

@@ -11,7 +11,7 @@ export default function Alert({ text, setOpen, style }) {
     }
 
     return (
-        <div className='notification' style={style}>
+        <div className='notificationModal' style={style}>
             <button title='Cerrar' className='close-button' onClick={close}>X</button>
             <p>{text}</p>
             <span className='progress'></span>

@@ -5,7 +5,7 @@
     color: rgb(27, 4, 4);
     cursor: pointer;
     width: 100%;
-    margin-right: 15px;
+    margin-right: 10px;
 }
 
 .drop_down:hover{
@@ -13,6 +13,7 @@
 }
 
 .form_category{
+    display: flex;
     align-items: center;
 }
 

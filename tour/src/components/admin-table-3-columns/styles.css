@@ -1,5 +1,9 @@
-:root{
+:root {
     --padding-top-botton: 15px;
+}
+
+.table {
+    overflow-x: auto;
 }
 
 table {
@@ -10,12 +14,12 @@ table {
     box-shadow: var(--box-shadow);
 }
 
-thead{
+thead {
     background-color: var(--color3);
     color: white;
 }
 
-thead th{
+thead th {
     border-bottom: none;
 }
 
@@ -28,11 +32,11 @@ td {
     max-width: 300px;
 }
 
-tbody tr:hover{
+tbody tr:hover {
     background-color: var(--color4);
 }
 
-.iconsLink{
+.iconsLink {
     margin-right: 10px;
     margin-left: 10px;
     background: transparent;
@@ -40,12 +44,46 @@ tbody tr:hover{
     cursor: pointer;
 }
 
-.iconsLink:hover{
-    
+.iconsLink:hover {
+
     transform: scale(1.5);
 }
 
-tr .icons{
+tr .icons {
     min-width: 200px;
     max-width: 200px;
+}
+
+@media only screen and (max-width: 1080px) {
+    table {
+        font-size: medium;
+    }
+
+    tr .icons {
+        min-width: 150px;
+        max-width: 150px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    table {
+        font-size: small;
+    }
+
+    tr .icons {
+        min-width: 100px;
+        max-width: 100px;
+    }
+
+    .iconsLink {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    .colunm1, .colunm2{
+        max-width: 200px;
+        min-width: 200px;
+    }
 }

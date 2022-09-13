@@ -1,51 +1,72 @@
-.upload_image{
-    display: flex;
-    margin-bottom: 50px;
-    align-items: center;
+.upload_image {
+  display: flex;
+  margin-bottom: 25px;
 }
 
-.upload_button{
-    background-color: var(--color3);
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: large;
-    cursor: pointer;
-    border: none;
-    box-shadow: var(--box-shadow);
+.upload_button {
+  background-color: var(--color3);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--box-shadow);
 }
 
-.upload_button:hover{
-    box-shadow: var(--box-shadow-hover);
+.upload_button:hover {
+  box-shadow: var(--box-shadow-hover);
 }
 
-.upload_image img{
-    width: 60px;
-    height: 60px;
-    padding-left: 20px;
-    object-fit: cover;
+.image_container img {
+  width: 60px;
+  height: 60px;
+  padding-left: 20px;
+  object-fit: cover;
 }
 
-.upload_button span{
-    margin-left: 10px;
+.upload_button span {
+  margin-left: 10px;
 }
-
+div {
+  position: relative;
+}
 .modal_close_x {
-    display: inline-block;
-    position: absolute;
-    font-size: medium;
-    border: none;
-    padding: 0;
-    background-color: rgba(255, 0, 0, 0.317);
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-    margin-top: -10px;
-    cursor: pointer;
+  display: inline-block;
+  position: absolute;
+  font-size: medium;
+  border: none;
+  padding: 0;
+  background-color: rgba(255, 0, 0, 0.317);
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  margin-left: 70px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+
+.modal_close_x:hover {
+  background-color: red;
+  transform: scale(1.2);
+}
+
+.image_container {
+  display: flex;
+  max-height: 600px;
+  overflow-x: scroll;
+  padding-top: 10px;
+  margin-bottom: 25px;
+}
+
+@media only screen and (max-width: 644px) {
+  .upload_button {
+    width: 200px;
+    font-size: smaller;
   }
 
-  .modal_close_x:hover{
-    background-color: red;
+  .upload_image {
+    justify-content: center;
   }
+}
