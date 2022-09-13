@@ -19,12 +19,13 @@ export default function TablePage({ Columns, Title, Buttons, Add, See, Update, D
     const [openModal, setOpenModal] = useState(false);
     const [List, setList] = useState([])
     const [Original, setOriginal] = useState();
-    const itemsPerTable = 5;
+    const itemsPerTable = 2;
     const [Deleted, setDeleted] = useState(false);
     const [Added, setAdded] = useState(false);
     const [Updated, setUpdated] = useState(false);
     const [ErrorMessage, setError] = useState(false);
     const [loading, setLoading] = useState(true);
+    const [updatePagination, setUpdatePagination] = useState(false);
 
     useEffect(() => {
         update();
@@ -33,7 +34,7 @@ export default function TablePage({ Columns, Title, Buttons, Add, See, Update, D
     const update = async () => {
         const snap = query(collection(db, Collection));
         onSnapshot(snap, () => {
-            let data = readData(Collection, setLoading);
+            let data = readData(Collection, setLoading, setUpdatePagination);
             data.then(function (result) {
                 if (result === null) {
                     setOriginal(null)
@@ -83,7 +84,7 @@ export default function TablePage({ Columns, Title, Buttons, Add, See, Update, D
                 {Original != null ?
                     <>
                         <Table columns={Columns} rows={List} Buttons={Buttons} See={See} Update={Update} Delete={Delete} Collection={Collection} setDeleted={setDeleted} setUpdated={setUpdated} setError={setError} />
-                        {Original.length !== 0 ?
+                        {Original.length !== 0 && !updatePagination?
                             <PaginatedItems itemsPerPage={itemsPerTable} items={Original} setCurrentItems={setList} />
                             : null}
                     </>
