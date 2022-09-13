@@ -27,7 +27,7 @@ export default function Add({ setOpenModal, setAlert, Collection }) {
     const update = async () => {
         const snap = query(collection(db, 'categories'));
         onSnapshot(snap, () => {
-            let data = readData('categories', setError);
+            let data = readData('categories', setError, setError);
             data.then(function (result) {
                 if (data != null) {
                     setCategories(result);
