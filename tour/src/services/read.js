@@ -8,11 +8,13 @@ import {
   createPromotionAdapter
 } from "../adapters/index";
 
-export const readData = async (collectionName, setLoading) => {
+export const readData = async (collectionName, setLoading, setUpdatePagination) => {
+  setUpdatePagination(true);
   try {
     const data = await getDocs(query(collection(db, collectionName), orderBy("name", "asc")));
     const information = iterateData(collectionName, data);
     setLoading(false)
+    setUpdatePagination(false);
     return (information);
   }
   catch (error) {
