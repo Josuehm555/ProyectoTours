@@ -1,5 +1,4 @@
 import Columns from "../api/JSON-promotions/promotion-table-columns.json"
-import Rows from "../api/JSON-promotions/promotions.json"
 import TablePage from "../components/table-page/page";
 import { faEye, faEdit, faTrash } from '@fortawesome/free-solid-svg-icons';
 import Add from "../components/modals/categories/add/add";
@@ -18,7 +17,7 @@ export default function Promotions() {
     return (
         <TablePage
             Columns={Columns}
-            Rows={Rows}
+            Collection={"promotions"}
             Title={"Promociones"}
             titleModal={"Información completa"}
             messageButton={"Ok"} 

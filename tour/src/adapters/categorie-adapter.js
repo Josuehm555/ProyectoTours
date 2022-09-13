@@ -1,3 +1,3 @@
-export const createCategorieAdapter = (id, categorie) => {
-    return {"column_1": String(id), "column_2": String(categorie.nombre), "column_3": String(categorie.description), "urlSee": "", "urlUpdate": "", "urlDelete": ""};
+export const createCategorieAdapter = (id, categorie, number) => {
+    return {"id":id, "column_1": String(categorie.name), "column_2": String(categorie.description), "images": categorie.images, "number": number};
 }

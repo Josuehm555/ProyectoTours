@@ -1,18 +1,39 @@
-.input{
-    padding: 15px;
-    border: none;
-    border-radius: 5px;
-    background-image: url('../../assets/search.png');
-    background-position: 15px 15px;
-    background-size: 20px;
-    background-repeat: no-repeat;
-    padding-left: 50px;
-    width: 80%;
-    box-shadow: var(--box-shadow);
-    margin: 0 1em 0 30%;
-    outline: none;
+.input {
+  padding: 15px;
+  border: none;
+  border-radius: 5px;
+  background-image: url("../../assets/search.png");
+  background-position: 15px 15px;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  padding-left: 50px;
+  box-shadow: var(--box-shadow);
+  outline: none;
+  width: 100%;
+  margin-right: 20px;
 }
 
-form{
-    display: flex;
+.form {
+  display: flex;
+}
+
+@media only screen and (max-width: 700px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .form Button {
+    margin-top: 20px;
+  }
+
+  .input {
+    width: auto;
+    margin-right: 0;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  .input {
+    font-size: 12px;
+  }
 }

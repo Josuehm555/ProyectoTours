@@ -1,14 +1,26 @@
-.buttonStyle{
-    background-color: var(--color3);
-    color: white;
-    padding: 15px;
-    border-radius: 5px;
-    font-size: large;
-    cursor: pointer;
-    border: none;
-    box-shadow: var(--box-shadow);
+.buttonStyle {
+  background-color: var(--color3);
+  color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  box-shadow: var(--box-shadow);
 }
 
-.buttonStyle:hover{
-    box-shadow: var(--box-shadow-hover);
+.buttonStyle:hover {
+  box-shadow: var(--box-shadow-hover);
+}
+
+@media only screen and (max-width: 900px) {
+  .buttonStyle{
+    font-size: medium;
+  }
+}
+
+@media only screen and (max-width: 340px) {
+  .buttonStyle{
+    font-size: small;
+  }
 }

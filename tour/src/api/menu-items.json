@@ -15,14 +15,14 @@
             "url": "/promociones"
         },
         {
-            "title": "Galería de Eventos",
-            "icon": "fa fa-camera fa-2x",
-            "url": "galeria"
-        },
-        {
             "title": "Administradores",
             "icon": "fa fa-user fa-2x",
             "url": "/administradores"
+        },
+        {
+            "title": "Galería de Eventos",
+            "icon": "fa fa-camera fa-2x",
+            "url": "galeria"
         },
         {
             "title": "Información General",

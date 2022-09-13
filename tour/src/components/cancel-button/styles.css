@@ -1,0 +1,30 @@
+.buttonCancelStyle {
+  background-color: white;
+  padding: 15px;
+  border-radius: 5px;
+  font-size: large;
+  cursor: pointer;
+  border: none;
+  margin-right: 50px;
+  box-shadow: var(--box-shadow);
+}
+
+.buttonCancelStyle:hover {
+  box-shadow: var(--box-shadow-hover);
+  background-color: var(--color5);
+  color: white;
+}
+.container {
+  display: inline-block;
+}
+
+@media only screen and (max-width: 571px) {
+  .container {
+    display: flex;
+    justify-content: center;
+  }
+  .buttonCancelStyle {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+}
