@@ -14,7 +14,7 @@
   width: 95%;
 }
 
-.inputSee:hover {
+.inputSee:hover, .textArea:hover {
   box-shadow: 5px 5px 8px 1px #888888;
 }
 
@@ -28,7 +28,9 @@
 }
 
 .inputSee:focus + .input-label,
-.inputSee:valid + .input-label {
+.inputSee:valid + .input-label,
+.textArea:focus +.input-label,
+.textArea:valid + .input-label {
   transform: translate(10px, -14px) scale(0.8);
   color: var(--color2);
   padding-inline: 5px;
