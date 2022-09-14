@@ -1,0 +1,19 @@
+.imagesModal img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 10px;
+}
+
+.seeContainer p {
+    margin-left: 20px;
+    text-align: justify;
+}
+
+.modalSpinner {
+    margin-bottom: 40px;
+}
+
+.modalSpinner img {
+    max-width: 50px;
+}

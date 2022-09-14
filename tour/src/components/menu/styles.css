@@ -39,22 +39,21 @@ nav.main-menu.expanded {
   z-index: 1000;
 }
 
-.main-menu > ul {
-  margin: 9px 0;
-}
-
 .main-menu li {
   position: relative;
   display: block;
   width: 250px;
-  margin: 40px 0 0 0 ;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-.nav-text:hover {
-  background-color: var(--color1);
-  text-align: left;
-  border-radius: 3px;
-  font-size: 1.1em;
+.main-menu li:hover {
+  background-color: var(--color3);
+  text-align: center;
+  border-radius: 5px;
+  transform: scale(1.1);
+  padding-left: 8px;
+  transition: 0.5s;
 }
 
 .link {
@@ -94,4 +93,5 @@ nav li {
   outline: 0;
   margin: 0;
   padding: 0;
+  cursor: pointer;
 }

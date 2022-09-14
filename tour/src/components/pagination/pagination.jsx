@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ReactPaginate from 'react-paginate';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons'
-import './styles.css'
+import { faAngleRight, faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import './styles.css';
 
 const next = <FontAwesomeIcon icon={faAngleRight} />
 const previous = <FontAwesomeIcon icon={faAngleLeft} />

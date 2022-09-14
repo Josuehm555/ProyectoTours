@@ -2,11 +2,8 @@ import './styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useState } from "react";
 import Modal from '../modals/modal'
-import SeeModal from '../modals/categories/see/see'
-import EditModal from '../modals/categories/edit/edit'
-import DeleteModal from '../modals/categories/delete/delete';
 
-export default function Button({ element, button }) {
+export default function Button({ element, button, SeeModal, UpdateModal, DeleteModal, Collection, setDeleted, setUpdated, setError }) {
 
     const [openModal, setOpenModal] = useState(false);
     const [bodyModal, setBodyModal] = useState()
@@ -31,11 +28,11 @@ export default function Button({ element, button }) {
             </button>
 
             {openModal && bodyModal === "See" ?
-                <Modal open={openModal} setOpen={setOpenModal} Container={SeeModal} element={element} title={button.titleModal}/>
+                <Modal open={openModal} setOpen={setOpenModal} Container={SeeModal} element={element} title={element.column_1}/>
             : openModal && bodyModal === "Edit" ?
-                <Modal open={openModal} setOpen={setOpenModal} Container={EditModal} element={element} title={button.titleModal}/>
+                <Modal open={openModal} setOpen={setOpenModal} Container={UpdateModal} element={element} title={button.titleModal} Collection={Collection} setAlert={setUpdated} />
             : openModal && bodyModal === "Delete" ?
-                <Modal open={openModal} setOpen={setOpenModal} Container={DeleteModal} element={element} title={button.titleModal}/>
+                <Modal open={openModal} setOpen={setOpenModal} Container={DeleteModal} element={element} title={button.titleModal} Collection={Collection} setAlert={setDeleted} setError={setError}/>
             : null
             }
         </>

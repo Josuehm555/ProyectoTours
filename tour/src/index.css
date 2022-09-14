@@ -14,9 +14,21 @@ body {
   --color1: #aede67;
   --color2: #3b97b7;
   --color3: #666666;
-  --color4: rgb(245, 245, 245);
+  --color4: rgb(231, 231, 231);
+  --color5: rgb(255, 81, 81);
 }
 
-h1{
+h1, h2{
   color: var(--color3);
+}
+
+.title{
+  margin-left: 80px;
+  margin-right: 20px;
+}
+
+@media only screen and (max-width: 450px) {
+  .title{
+    font-size: 1.5rem;
+  }
 }

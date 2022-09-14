@@ -1,17 +1,30 @@
-import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { collection, onSnapshot, query } from "firebase/firestore";
+import { db } from '../services/firebase-config';
 import Card from '../components/card-image/card';
-import Image1 from '../assets/galery1.jpg'
-import Image2 from '../assets/galery2.jpeg'
-import { useState } from 'react';
-
+import { readGalery } from '../services/read';
+import { useEffect, useState } from 'react';
 
 export default function Galery() {
-    const [images, setImages] = useState([Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2, Image1, Image2]);
+    const [images, setImages] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        update();
+    }, [])
+
+    const update = async () => {
+        const snap = query(collection(db, "galery"));
+        onSnapshot(snap, () => {
+            let data = readGalery(setLoading);
+            data.then(function (result) {
+                if (data != null) {
+                    setImages(result);
+                }
+            });
+        });
+    }
 
     return (
-        <>
-            <h1>Galería de eventos</h1>
-            <Card images={images} setImages={setImages}/>
-        </>
+        <Card images={images} loading={loading} setLoading={setLoading} />
     );
 }
