@@ -5,8 +5,10 @@ import {
   createCategorieAdapter,
   createSubcategorieAdapter,
   createAdministratorAdapter,
-  createPromotionAdapter
+  createPromotionAdapter,
+  createGeneralInformationAdapter
 } from "../adapters/index";
+
 
 export const readData = async (collectionName, setLoading, setUpdatePagination) => {
   setUpdatePagination(true);
@@ -54,11 +56,26 @@ export const iterateData = (collectionName, data) => {
       if (collectionName === "galery") {
         information.push(createGaleryAdapter(doc.id, doc.data()));
       }
+      if (collectionName === "general-information") {
+        information.push(createGeneralInformationAdapter(doc.id, doc.data()));
+      }
       number += 1;
     });
     return information
   }
   else {
     return null;
+  }
+}
+
+export const readInformation = async (setSpinner) => {
+  try {
+    const data = await getDocs(query(collection(db, "general-information")));
+    const information = iterateData("general-information", data);
+    setSpinner(false);
+    return information;
+  }
+  catch (error) {
+    console.log(error);
   }
 }

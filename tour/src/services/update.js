@@ -41,3 +41,20 @@ export const updateDataAdmins = async (collectionName, idRow, nameValue, mailVal
     mail: mailValue
   });
 };
+
+export const updateDataInformation = async ( idRow, aboutus, email, facebook, instagram, phone, setError, setLoading, setUpdate ) => {
+  try{
+    await updateDoc(doc(db, "general-information", idRow), {
+      aboutus: aboutus,
+      email: email,
+      facebook: facebook,
+      instagram: instagram,
+      phone: phone
+    });
+    setLoading(false);
+    setUpdate(true);
+  }
+  catch{
+    setError(true);
+  }
+};

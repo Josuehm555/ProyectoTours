@@ -5,6 +5,7 @@ import NotFoundPage from '../pages/not-found-page';
 import Galery from '../pages/galery';
 import Subcategory from '../pages/subcategories';
 import Promotions from '../pages/promotions';
+import GeneralInformation from '../pages/general-information';
 
 export default function Routing() {
     return (
@@ -15,6 +16,7 @@ export default function Routing() {
             <Route path='/galeria' element={<Galery/>} />
             <Route path='/subcategoria' element={<Subcategory/>} />
             <Route path='/promociones' element={<Promotions/>} />
+            <Route path='/informacion' element={<GeneralInformation/>}/>
         </Routes>
     );
 }
