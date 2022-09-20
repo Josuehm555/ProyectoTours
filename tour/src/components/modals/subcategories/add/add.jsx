@@ -56,7 +56,7 @@ export default function Add({ setOpenModal, setAlert, Collection }) {
     return (
         <>
             <form className='form_category'>
-                <label>Categoría: </label>
+                <div><label>Categoría: </label> </div>
                 <select className="drop_down" onChange={handleChange}>
                     {Categories.map((category, key) =>
                         <option key={key} value={category.column_1}>{category.column_1}</option>

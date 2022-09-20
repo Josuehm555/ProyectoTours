@@ -19,7 +19,7 @@
 .modal {
   position: fixed;
   top: 0;
-  left: 0;
+  left: 60px;
   bottom: 0;
   right: 0;
   background-color: rgba(3, 3, 3, 0.8);
@@ -81,20 +81,22 @@
   }
 }
 
-@media only screen and (max-width: 1079px) {
+ @media only screen and (max-width: 800px) {
   .modal__container {
-    margin-left: 25.7%;
-    margin-right: 20%;
+    margin-left: 40px;
+    margin-right: 40px;
   }
-}
+} 
+@media only screen and (max-width: 571px) {
+  .modal__container {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+} 
 
 @media only screen and (max-width: 500px) {
   .modal__container h1 {
     font-size: large;
     margin-top: 20px;
-  }
-  .modal__container {
-    margin-left: 25%;
-    margin-right: 5%;
   }
 }

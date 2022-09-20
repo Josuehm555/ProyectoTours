@@ -1,6 +1,14 @@
+.imagesModal {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
 .imagesModal img {
-    width: 120px;
-    height: 120px;
+    width: 6rem;
+    height: 6rem;
     object-fit: cover;
     margin: 10px;
 }
@@ -17,3 +25,10 @@
 .modalSpinner img {
     max-width: 50px;
 }
+
+@media only screen and (max-width: 599px) {
+    .imagesModal img {
+        width: 5rem;
+        height: 5rem;
+    }
+  }

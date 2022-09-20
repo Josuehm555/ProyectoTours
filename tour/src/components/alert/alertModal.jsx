@@ -1,3 +1,5 @@
+import { faXmark } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { useEffect } from 'react';
 import './styles.css'
 
@@ -12,9 +14,10 @@ export default function Alert({ text, setOpen, style }) {
 
     return (
         <div className='notificationModal' style={style}>
-            <button title='Cerrar' className='close-button' onClick={close}>X</button>
+            <button title='Cerrar' className='close-button' onClick={close}> 
+            <FontAwesomeIcon icon={faXmark} 
+            /></button>
             <p>{text}</p>
-            <span className='progress'></span>
         </div>
     );
 }

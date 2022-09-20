@@ -1,24 +1,40 @@
-.drop_down{
-    padding: 10px;
-    border: 2px solid black ;
-    border-radius: 4px;
-    color: rgb(27, 4, 4);
-    cursor: pointer;
-    width: 100%;
-    margin-right: 10px;
+.drop_down {
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  color: rgb(27, 4, 4);
+  cursor: pointer;
+  width: 100%;
 }
 
-.drop_down:hover{
-    box-shadow: var(--box-shadow-hover);
+.drop_down:hover {
+  box-shadow: var(--box-shadow-hover);
 }
 
-.form_category{
+.form_category {
+  display: flex;
+  align-items: center;
+  padding-right: 0;
+}
+
+.form_category label {
+  padding-right: 20px;
+  font-size: large;
+  padding-left: 10px;
+}
+
+@media only screen and (max-width: 571px) {
+  .form_category {
+    flex-direction: column;
+  }
+  .form_category div {
     display: flex;
-    align-items: center;
-}
-
-.form_category label{
-    padding-right: 20px;
-    font-size: large;
-    padding-left: 10px;
+    justify-content: start;
+    width: 100%;
+  }
+  .form_category label {
+    padding: 0;
+  }
+  
+  
 }

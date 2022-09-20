@@ -6,7 +6,7 @@ export default function See({ element }) {
             <p> Descripción: {element.column_2} </p>
             <div className="imagesModal">
                 {element.images.map((image, key) =>
-                    <a key={key} href={image} target="_blank"><img src={image} /></a>
+                    <a key={key} href={image} target="_blank"><img className='imageSee' src={image} /></a>
                 )}
             </div>
         </div>

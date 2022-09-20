@@ -13,14 +13,11 @@
   box-shadow: var(--box-shadow-hover);
 }
 
-@media only screen and (max-width: 900px) {
-  .buttonStyle{
-    font-size: medium;
-  }
-}
 
-@media only screen and (max-width: 340px) {
+@media only screen and (max-width: 571px) {
   .buttonStyle{
-    font-size: small;
+    width: 100%;
+    margin-top: 10px;
+    font-size: smaller;
   }
 }
