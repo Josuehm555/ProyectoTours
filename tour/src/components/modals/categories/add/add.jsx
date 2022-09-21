@@ -7,7 +7,7 @@ import Alert from '../../../alert/alertModal';
 import Button from '../../../button/button';
 import Input from '../../../input/input';
 import { useState } from 'react';
-
+import '../styles.css'
 export default function Add({ setOpenModal, setAlert, Collection }) {
 
     const [images, setImages] = useState([]);

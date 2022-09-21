@@ -1,34 +1,41 @@
 .imagesModal {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    max-height: 200px;
-    overflow-y: auto;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-height: 200px;
+  overflow-y: auto;
 }
 
 .imagesModal img {
-    width: 6rem;
-    height: 6rem;
-    object-fit: cover;
-    margin: 10px;
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  margin: 10px;
 }
 
 .seeContainer p {
-    margin-left: 20px;
-    text-align: justify;
+  margin-left: 20px;
+  text-align: justify;
 }
 
 .modalSpinner {
-    margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .modalSpinner img {
-    max-width: 50px;
+  max-width: 50px;
 }
 
 @media only screen and (max-width: 599px) {
-    .imagesModal img {
-        width: 5rem;
-        height: 5rem;
-    }
+  .imagesModal img {
+    width: 5rem;
+    height: 5rem;
   }
+}
+
+.AlertsModal {
+    height: 40px;
+    top: -50px;
+    margin-bottom: 0;
+    margin-top: 0;
+}

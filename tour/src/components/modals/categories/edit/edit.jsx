@@ -7,7 +7,7 @@ import Alert from "../../../alert/alertModal";
 import Button from "../../../button/button";
 import { useEffect, useState } from 'react';
 import Input from '../../../input/input';
-
+import '../styles.css'
 export default function Edit({ element, setOpenModal, setAlert, Collection }) {
 
     const [images, setImages] = useState([]);

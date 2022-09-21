@@ -8,7 +8,7 @@ import Alert from "../../../alert/alertModal";
 import { useEffect, useState } from 'react';
 import Button from '../../../button/button';
 import Input from '../../../input/input';
-import './styles.css';
+import '../styles.css';
 
 export default function Add({ setOpenModal, setAlert, Collection }) {
 

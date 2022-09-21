@@ -19,8 +19,8 @@
 }
 
 .image_container img {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   padding-left: 20px;
   object-fit: cover;
 }
@@ -45,6 +45,7 @@ div {
   margin-left: 70px;
   margin-top: -10px;
   cursor: pointer;
+  right: -8px;
 }
 
 .modal_close_x:hover {
@@ -56,8 +57,9 @@ div {
   display: flex;
   max-height: 600px;
   overflow-x: auto;
-  padding-top: 10px;
+  padding-top: 15px;
   margin-bottom: 25px;
+
 }
 
 @media only screen and (max-width: 644px) {

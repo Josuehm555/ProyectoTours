@@ -1,0 +1,46 @@
+.AlertsModal {
+    height: 40px;
+    top: 0px;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .drop_down {
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 4px;
+    color: rgb(27, 4, 4);
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .drop_down:hover {
+    box-shadow: var(--box-shadow-hover);
+  }
+  
+  .form_category {
+    display: flex;
+    align-items: center;
+    padding-right: 0;
+  }
+  
+  .form_category label {
+    padding-right: 20px;
+    font-size: large;
+    padding-left: 10px;
+    margin-bottom: 5px;
+  }
+  
+  @media only screen and (max-width: 571px) {
+    .form_category {
+      flex-direction: column;
+    }
+    .form_category div {
+      display: flex;
+      justify-content: start;
+      width: 100%;
+    }
+    .form_category label {
+      padding: 0;
+    }
+  }
