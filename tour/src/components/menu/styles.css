@@ -48,7 +48,7 @@ nav.main-menu.expanded {
 }
 
 .main-menu li:hover {
-  background-color: var(--color3);
+  background-color: var(--color4);
   text-align: center;
   border-radius: 5px;
   transform: scale(1.1);
@@ -61,6 +61,11 @@ nav.main-menu.expanded {
   text-decoration: none;
   display: block;
   padding:8px 0 8px 0  ;
+}
+
+.main-menu li:hover .link,
+.main-menu li:hover i{
+  color: var(--color2);
 }
 
 .main-menu .nav-text {

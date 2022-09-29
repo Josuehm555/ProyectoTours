@@ -19,7 +19,7 @@ export default function TablePage({ Columns, Title, Buttons, Add, See, Update, D
     const [openModal, setOpenModal] = useState(false);
     const [List, setList] = useState([])
     const [Original, setOriginal] = useState();
-    const itemsPerTable = 2;
+    const itemsPerTable = 6;
     const [Deleted, setDeleted] = useState(false);
     const [Added, setAdded] = useState(false);
     const [Updated, setUpdated] = useState(false);
