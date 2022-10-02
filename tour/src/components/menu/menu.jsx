@@ -1,33 +1,17 @@
-import { NavLink } from 'react-router-dom'
+import { useState } from 'react';
+import { MobileMenu } from './mobileMenu'
+import { DesktopMenu } from './desktopMenu'
 import './styles.css'
 
+export default function Menu({ Items }) {
 
-export default function Menu({Items}) {
+    const [MenuMobile, setMenuMobile] = useState(true)
+
 
     return (
         <>
-            <div className="area"/>
-            <nav className="main-menu">
-                <ul>
-                    {Items.data.map(element =>
-                        <li key={element.title}>
-                            <i className={element.icon}></i>
-                            <span className="nav-text">
-                                <NavLink className='link' to={element.url}>{element.title}</NavLink>
-                            </span>
-                        </li>
-                    )}
-                </ul>
-
-                <ul className="logout">
-                    <li>
-                        <i className="fa fa-sign-out"></i>
-                        <span className="nav-text">
-                            Cerrar Sesión
-                        </span>
-                    </li>
-                </ul>
-            </nav>
+            <MobileMenu Items={Items} setMenuMobile={setMenuMobile} className={"main-mobile"} />
+            <DesktopMenu Items={Items} setMenuMobile={setMenuMobile} />
         </>
     );
 }
