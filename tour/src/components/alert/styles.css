@@ -23,7 +23,7 @@
     color: #f6f5f9;
     box-shadow: 0 1px 10px rgba(0, 0, 0.1);
     animation-name: fade;
-    animation-duration: 5s;
+    animation-duration: 2s;
 }
 
 .notificationModal p{
@@ -73,19 +73,19 @@
     0%{
         opacity: 1 ;
         visibility: visible;  
-        transform: translateX(100%);
+        transform: translateX(-430px);
     }
     25%{
-        transform: translateX(1%);
+        transform: translateX(430px);
     }
     50%{
-        transform: translateX(1%);
+        transform: translateX(430px);
     }
     75%{
-        transform: translateX(150%);
+        transform: translateX(430px);
     }
     100%{
-        transform: translateX(150%);
+        transform: translateX(430px);
         opacity: 1 ;
         visibility: visible;  
     }

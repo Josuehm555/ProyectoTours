@@ -202,9 +202,12 @@ nav ul{
 .main-menu{
   display: none;
 }
+.fatherBurger .fa-bars {
+  color: black;}
 
 .fatherBurger{
-  box-shadow: var(--box-shadow-hover);
+  background-color: transparent;
+  height: 5%;
 }
 nav ul{
   display: flex;

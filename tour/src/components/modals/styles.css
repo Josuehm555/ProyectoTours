@@ -19,7 +19,7 @@
 .modal {
   position: fixed;
   top: 0;
-  left: 60px;
+  left: 0;
   bottom: 0;
   right: 0;
   background-color: rgba(3, 3, 3, 0.8);
@@ -81,10 +81,10 @@
   }
 }
 
- @media only screen and (max-width: 800px) {
+ @media only screen and (max-width: 960px) {
   .modal__container {
-    margin-left: 40px;
-    margin-right: 40px;
+    margin-left: 25%;
+    margin-right: 25%;
   }
 } 
 @media only screen and (max-width: 571px) {
