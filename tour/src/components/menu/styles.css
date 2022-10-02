@@ -88,7 +88,7 @@ nav.main-menu.expanded {
   transition: 0.5s;
  }
 .main-menu li:hover {
-  background-color: var(--color3);
+  background-color: var(--color4);
   text-align: center;
   border-radius: 5px;
   transform: scale(1.1);
