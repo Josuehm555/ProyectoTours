@@ -6,28 +6,21 @@ export const DesktopMenu = ({ Items, setMenuMobile }) => {
 
         <nav className={"main-menu"}>
             <ul>
-                <div className='firstChild'>
+                <div>
                     {Items.data.map(element =>
                         <li key={element.title}>
                             <i className={element.icon}></i>
-                            <span onClick={() => { setMenuMobile(true) }} className="nav-text">
-                                <NavLink className='link' to={element.url}>{element.title}</NavLink>
-                            </span>
+                            <NavLink className='link' to={element.url}>{element.title}</NavLink>
                         </li>
                     )}
                 </div>
                 <div>
                     <li>
                         <i className="fa fa-sign-out"></i>
-                        <span className="nav-text">
-                            Cerrar Sesión
-                        </span>
+                        <NavLink className='link' to={""}>Cerrar Sesión</NavLink>
                     </li>
-
                 </div>
-
-            </ul>
-           
+                </ul>
         </nav>
     )
 }

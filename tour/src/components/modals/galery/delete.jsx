@@ -11,7 +11,7 @@ export default function Delete({ element, setOpenModal, OnClick }) {
                 <img src={element} />
             </div>
             <Cancel titulo={"Cancelar"} icon={""} OnClick={() => setOpenModal(false)} />
-            <Button titulo={"Sí, Eliminar"} icon={""} style={{ backgroundColor: "#3b97b7"}} OnClick={OnClick}/>
+            <Button titulo={"Eliminar"} icon={""} style={{ backgroundColor: "#3b97b7"}} OnClick={OnClick}/>
         </>
     );
 }

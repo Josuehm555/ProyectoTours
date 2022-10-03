@@ -17,7 +17,7 @@ export default function Delete({ element, setOpenModal, Collection, setAlert, se
                 <p>¿Seguro que desea eliminar a {element.column_1}?</p>
             </div>
             <Cancel titulo={"Cancelar"} icon={""} OnClick={() => setOpenModal(false)} />
-            <Button titulo={"Sí, Eliminar"} icon={""} style={{ backgroundColor: "#3b97b7"}} OnClick={Delete}/>
+            <Button titulo={"Eliminar"} icon={""} style={{ backgroundColor: "#3b97b7"}} OnClick={Delete}/>
         </>
     );
 }

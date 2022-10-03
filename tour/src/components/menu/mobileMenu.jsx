@@ -1,17 +1,18 @@
 import './styles.css'
 import { useState } from 'react'
-import { IconBurger } from './iconBurger'
-import {SubMenuMobile} from './subMenuMobile'
-import { faBars  } from '@fortawesome/free-solid-svg-icons';
-export const MobileMenu = ({setMenuMobile, Items}) => {
+import { SubMenuMobile } from './subMenuMobile'
+export const MobileMenu = ({  Items }) => {
 
   const [menu, setMenu] = useState(false);
-
+  const prueba=(e)=>{
+  console.log(e);
+  }
   return (
-    <div className="fatherBurger">
-      
-      <i  className={"fa fa-bars"}  onClick={()=>{setMenu(true) } } ></i>
-      {menu && <SubMenuMobile Items={Items} setMenu={setMenu} > </SubMenuMobile> }
-    </div>
+    <>
+      <div className="fatherBurger">
+        <i className={"fa fa-bars"} onClick={() => { setMenu(true) }} ></i>
+        {menu &&<SubMenuMobile Items={Items} setMenu={setMenu} > </SubMenuMobile>}
+      </div>
+    </>
   )
 }

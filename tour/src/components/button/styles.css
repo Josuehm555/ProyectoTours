@@ -13,8 +13,7 @@
   box-shadow: var(--box-shadow-hover);
 }
 
-
-@media only screen and (max-width: 571px) {
+@media only screen and (max-width: 675px) {
   .buttonStyle{
     width: 100%;
     margin-top: 10px;
